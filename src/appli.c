@@ -53,8 +53,13 @@ void application(){
 				scanf("%s", nom);
   				printf("veuillez saisir le prénom de l'étudiant  :  ");
   				scanf("%s", prenom);
+  				saisi_etudiant :
 				printf("veuillez saisir la note de l'étudiant :  ");
   				scanf("%f", &note);	
+  				if(note < 0 || note > 20){
+  					printf("la note saisie est incorrecte , recommencez !!\n");
+  					goto saisi_etudiant;
+  				}
   				add_etud(nom, prenom, note);
     			printf("\n============= Etudiant ajouté ===============  \n");
   				break;
